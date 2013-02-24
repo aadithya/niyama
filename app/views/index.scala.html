@@ -1,9 +1,9 @@
-@(message: String)
+@(searchForm: Form[(String,String)])
 
 @main("Niyama") {
 <div id = "wrap">
     @navbar()
-    @search()
+    @search(searchForm)
 <div id="push"></div>
 </div>
     @footer()

@@ -1,7 +1,13 @@
+@(searchForm: Form[(String,String)])
 @import helper.twitterBootstrap._
+
 <div class="container">
     <div class="center hero-unit">
-        Search for Lawyers
-
+        <h3>Search for Lawyers</h3>
+        @helper.form(action = routes.Application.search) {
+            @helper.inputText(searchForm("Area"))
+            @helper.inputText(searchForm("City"))
+            <button type="submit" class="btn btn-primary">Search</button>
+        }
     </div>
 </div>
